@@ -6,7 +6,7 @@ from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 
 # Load API keys
 load_dotenv()
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENROUTER_API_KEY")
+os.environ["OPENAI_API_KEY"] = st.secrets("OPENROUTER_API_KEY")
 os.environ["OPENAI_API_BASE"] = "https://openrouter.ai/api/v1"
 
 # Initialize model
